@@ -22,13 +22,13 @@
                             <li class="nav-item dropdown">
                                 <a class="cursor-pointer nav-link dropdown-toggle" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <p-avatar 
+                                    class="me-2"
                                     icon="pi pi-user" 
-                                    styleClass="mr-2" size="large" /></a>
+                                    styleClass="mr-2" size="large" />{{userName}}</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                                     <!-- <a class="dropdown-item" routerLink="/login">ForgetPassword</a> -->
                                     <a class="dropdown-item" (click)="openDialog()">Update Password</a>
                                     <a class="dropdown-item" (click)="logout()">LogOut</a>
-
                                 </div>
                             </li>
                         </ul>

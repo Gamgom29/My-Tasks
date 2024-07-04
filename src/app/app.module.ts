@@ -24,6 +24,8 @@ import { BlanklayoutComponent } from './blanklayout/blanklayout.component';
 import { BlankNavbarComponent } from './blank-navbar/blank-navbar.component';
 import { UpdatePasswordComponent } from './components/update-password/update-password.component';
 import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
+import { SearchPipe } from './core/search.pipe';
+import { ProfileComponent } from './components/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { ForgetPassComponent } from './components/forget-pass/forget-pass.compon
     BlanklayoutComponent,
     BlankNavbarComponent,
     UpdatePasswordComponent,
-    ForgetPassComponent
+    ForgetPassComponent,
+    SearchPipe,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

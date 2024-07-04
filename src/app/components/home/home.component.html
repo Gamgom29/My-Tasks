@@ -26,7 +26,7 @@
     </div>
     <div class="d-flex justify-content-center gap-5 mt-4">
         <div>
-            <input type="text" class="form-control" placeholder="Search..">
+            <input [(ngModel)]="searchTerm" type="text" class="form-control" placeholder="Search..">
         </div>
         <div>
             <button (click)="openDialog()" class="btn btn-primary px-3">Create New Task</button>
@@ -42,7 +42,7 @@
             [cdkDropListData]="todo"
             class="example-list rounded-3"
             (cdkDropListDropped)="drop($event)">
-            @for (item of todo; track item) {
+            @for (item of todo|search:searchTerm; track item) {
                 <div class="d-flex justify-content-between">
                     <span  class="text-start d-block ms-2 mt-1 fs-5 fw-bolder">{{item.name}} : </span>
                     <span class="me-2 mt-2"><i class="fas fa-trash fs-5 text-danger cursor-pointer" (click)="delTask(item._id)"></i></span>

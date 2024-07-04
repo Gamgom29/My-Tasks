@@ -8,6 +8,7 @@ import { BlanklayoutComponent } from './blanklayout/blanklayout.component';
 import { authGuard } from './auth.guard';
 import { UpdatePasswordComponent } from './components/update-password/update-password.component';
 import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     [
       {path:'' , redirectTo:'home',pathMatch:'full'},
       {path:'home' , component:HomeComponent},
+      {path:'profile' , component:ProfileComponent}
     ]
   },
   

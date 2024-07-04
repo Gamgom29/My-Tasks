@@ -20,7 +20,7 @@ export class UpdatePasswordComponent {
 
   frmgrp:FormGroup = this._FormBuilder.group({
     passwordCurrant:['' , Validators.required],
-    password:['' , Validators.required],
+    password:['' , [Validators.required,Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)]],
     passwordConfirm:['' , Validators.required],
   });
 

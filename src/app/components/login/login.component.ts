@@ -32,9 +32,13 @@ export class LoginComponent {
           this._NgxSpinnerService.hide();
           this._router.navigate(['/home']);
           localStorage.setItem('taskstoken' , res.data.token);
+          this._AuthService.userName.next(res.data.user.name);
+          console.log(this._AuthService);
+          
         },
         error:err=>{
           console.log(err);
+          this._ToastrService.error(err.error.message)
           this._NgxSpinnerService.hide();
         }
       })

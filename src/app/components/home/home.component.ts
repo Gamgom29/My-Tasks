@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.getAllTasks();
     }
     allTasksCount!:any;
+    searchTerm!:string;
 
     getAllTasks(){
       this._TasksService.getAllTasks().subscribe({
