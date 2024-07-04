@@ -1,0 +1,14 @@
+.inputs-grp {
+    padding-top: 120px;
+}
+.p-password {
+    display: block !important;
+
+}
+.p-password-panel {
+    width: 100% !important;
+    display: block !important;
+}
+.p-password-meter	{
+    width: 100%;
+}

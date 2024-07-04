@@ -1,0 +1,62 @@
+<section class="container bg">
+    <div class="row ">
+        <div class="col-md-6">
+            <div>
+                <img class="w-100" src="./assets/images/Sign up-rafiki.svg" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="inputs-grp">
+                <form [formGroup]="registerForm" (ngSubmit)="handleForm()">
+                    <div>
+                        <p-floatLabel class="d-block w-100">
+                            <input formControlName="email" class="d-block w-100" type="email"  pInputText id="emai" />
+                            <label for="email">Email</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="mt-5">
+                        <p-floatLabel class="d-block w-100">
+                            <input formControlName="name" class="d-block w-100"  pInputText id="username" />
+                            <label for="username">Username</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="mt-5 w-100">
+                        <p-floatLabel>
+                            <p-password formControlName="password" toggleMask="true" id="pwd1">
+                                <ng-template pTemplate="header">
+                                    <h6>Pick a password</h6>
+                                </ng-template>
+                                <ng-template pTemplate="footer">
+                                    <p-divider />
+                                    <p class="mt-2">Suggestions</p>
+                                    <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                                        <li>At least one lowercase</li>
+                                        <li>At least one uppercase</li>
+                                        <li>At least one numeric</li>
+                                        <li>Minimum 8 characters</li>
+                                    </ul>
+                                </ng-template>
+                            </p-password>
+                            <label for="pwd1">Password</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="mt-5">
+                        <p-floatLabel>
+                            <p-password formControlName="passwordConfirm" [feedback]="false" />
+                            <label for="password">ConfirmPassword</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="mt-4">
+                        <p-selectButton 
+                            formControlName="gender"
+                            [options]="stateOptions" 
+                            optionLabel="label" 
+                            optionValue="value" />
+                            
+                    </div>
+                    <button [disabled]="!registerForm.valid" class="btn btn-primary mx-auto d-block px-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

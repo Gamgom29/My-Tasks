@@ -1,0 +1,19 @@
+.icon-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+.nav-link{
+    font-size: 20px;
+    color: #000!important;
+}
+.nav-item:focus{
+    background-color: transparent;
+}
+.dropdown-item:focus{
+    background-color: transparent;
+    color: #000;
+}
+.bg{
+    background-color: #F1F8E8;
+}

@@ -1,0 +1,41 @@
+<nav
+    class="navbar navbar-expand-sm navbar-light bg-white"
+>
+    <div class="container">
+        <a class="navbar-brand" href="#"><img class="icon-img" src="./assets/images/pencil.png">My Tasks</a>
+        <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="cursor-pointer nav-link dropdown-toggle" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p-avatar 
+                                    icon="pi pi-user" 
+                                    styleClass="mr-2" size="large" /></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <!-- <a class="dropdown-item" routerLink="/login">ForgetPassword</a> -->
+                                    <a class="dropdown-item" (click)="openDialog()">Update Password</a>
+                                    <a class="dropdown-item" (click)="logout()">LogOut</a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        
+        </div>
+    </div>
+</nav>

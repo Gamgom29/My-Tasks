@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto+Slab:wght@300&display=swap');
+@import "primeicons/primeicons.css";
+:root{
+    --main-font:'Croissant One', cursive,'Roboto Slab', serif;
+}
+body{
+    font-family: var(--main-font) !important;
+    background-color: #EEF7FF;
+}
+
+.p-password {
+    display: block !important;
+}
+
+.p-inputtext {
+    width: 100% ;
+}
+.p-autocomplete.p-invalid.p-component > .p-inputtext{
+    border-color: none !important;
+}
+.p-inputtext::marker {
+    border-color: #000 !important;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}

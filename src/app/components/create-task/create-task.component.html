@@ -1,0 +1,15 @@
+<div class="bg-white p-5 w-100 rounded-3">
+    <p class="w-100 text-end "><i (click)="dialogRef.close()" class="fas fa-close fs-3 cursor-pointer"></i></p>
+    <h1 class="text-center mb-3">Create New Task</h1>
+    <form [formGroup]="taskForm" (ngSubmit)="CreateTask()">
+        <div>
+            <label for="Title">Title</label>
+            <input formControlName="name" type="text" id="Title" class="form-control">
+        </div>        
+        <div class="mt-5">
+            <label for="Title">Content</label>
+            <textarea formControlName="content" class="form-control" name="" id=""></textarea>
+        </div>
+        <button [disabled]="!taskForm.valid" class="btn btn-primary px-3 mt-4 d-block mx-auto">Create </button>
+    </form>
+</div>

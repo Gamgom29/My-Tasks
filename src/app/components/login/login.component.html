@@ -1,0 +1,32 @@
+<section class="container bg">
+    <div class="row ">
+        <div class="col-md-6">
+            <div>
+                <img class="w-100" src="./assets/images/Login-rafiki.svg" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="d-flex h-100 w-100 m-auto justify-content-center flex-column">
+                <form [formGroup]="loginForm" (ngSubmit)="handleForm()">
+                    <div class="">
+                        <div>
+                            <p-floatLabel class="d-block w-100">
+                                <input formControlName="email" class="d-block w-100" type="email"  pInputText id="emai" />
+                                <label for="email">Email</label>
+                            </p-floatLabel>
+                        </div>
+                        <div class="mt-5">
+                            <p-floatLabel>
+                                <p-password formControlName="password" [feedback]="false" />
+                                <label for="password">Password</label>
+                            </p-floatLabel>
+                        </div>
+                        <a class="w-100 text-end d-block mt-4 forget-link" routerLink="/forgetPassword">Forget Password</a>
+                        <button [disabled]="false" class="btn btn-primary mt-4 mx-auto d-block px-4">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
